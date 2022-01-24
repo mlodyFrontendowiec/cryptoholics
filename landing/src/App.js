@@ -1,15 +1,15 @@
 import About from "./comopnents/About/About";
 import Header from "./comopnents/Header/Header";
+import React from "react";
+import Roadmap from "./comopnents/Roadmap/Roadmap";
 
 function App() {
-  const handleBackClick = (ref) => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
-  };
   return (
     <div className="App">
       <Header />
       {/* <Banner /> */}
       <About />
+      <Roadmap />
     </div>
   );
 }

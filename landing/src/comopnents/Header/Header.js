@@ -2,16 +2,20 @@ import React from "react";
 import styled from "styled-components";
 
 const Header = () => {
-  const ScrollToArticle = () => {
-    document.getElementById("article").scrollIntoView({ behavior: "smooth" });
+  const ScrollToArticle = (name) => {
+    document.getElementById(name).scrollIntoView({ behavior: "smooth" });
   };
   return (
     <StyledHeader>
       <StyledH1>Cryptoholicans</StyledH1>
       <nav>
         <StyledList>
-          <StyledListItem onClick={ScrollToArticle}>About</StyledListItem>
-          <StyledListItem>Roadmap</StyledListItem>
+          <StyledListItem onClick={() => ScrollToArticle("article")}>
+            About
+          </StyledListItem>
+          <StyledListItem onClick={() => ScrollToArticle("roadmap")}>
+            Roadmap
+          </StyledListItem>
           <StyledListItem>Benefits</StyledListItem>
           <StyledListItem>Team</StyledListItem>
           <StyledListItem>FAQ</StyledListItem>
@@ -24,7 +28,7 @@ const Header = () => {
 const StyledH1 = styled.h1`
   font-size: 40px;
   font-weight: 600;
-  margin-left: 70px;
+  margin-left: 100px;
 `;
 
 const StyledHeader = styled.header`
@@ -34,6 +38,11 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
 `;
 
 const StyledList = styled.ul`

@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { HashLink } from "react-router-hash-link";
 import styled from "styled-components";
 
 const About = () => {
@@ -43,7 +42,9 @@ const About = () => {
 const StyledSection = styled.section`
   margin-top: 100vh;
   height: 100vh;
-  padding: 20px 100px;
+  display: flex;
+  align-items: center;
+  padding: 0px 100px;
 `;
 
 const StyledH2 = styled.h2`
